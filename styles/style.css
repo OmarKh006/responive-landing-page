@@ -1,5 +1,100 @@
+/*Start CSS Reset*/
 * {
   margin: 0;
   padding: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+/*End CSS Reset*/
+
+body {
+  font-size: 1.4rem;
+  font-family: "Public Sans", sans-serif;
+  background-color: white;
+  color: black;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 75rem;
+}
+
+.header {
+  padding: 2rem 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: white;
+  z-index: -1;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+  text-decoration: none;
+  font-weight: 600;
+  color: hsl(233, 8%, 62%);
+  transition: 0.3s;
+}
+
+.navigation__link:hover,
+.navigation__link:active {
+  transition: 0.3s;
+  border-bottom: 4px solid hsl(136, 64%, 51%);
+  font-weight: 950;
+  color: hsl(233, 26%, 24%);
+}
+
+.request {
+  margin-left: auto;
+}
+
+.button {
+  background: linear-gradient(135deg, #32c697, #4ed6b2);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  opacity: 0.8;
 }
