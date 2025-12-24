@@ -37,8 +37,10 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: 90rem;
 }
+
+/* Header */
 
 .header {
   padding: 2rem 0;
@@ -98,3 +100,5 @@ body {
 .button:hover {
   opacity: 0.8;
 }
+
+/* End Header */
