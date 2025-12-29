@@ -26,38 +26,62 @@ ul,
 ol {
   list-style: none;
 }
+
 /*End CSS Reset*/
 
-body {
-  font-size: 1.4rem;
+/* Globals */
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 12rem;
+}
+
+body,
+[type="submit"] {
+  font-size: 1.6rem;
   font-family: "Public Sans", sans-serif;
   background-color: white;
   color: black;
+  overflow-x: hidden;
+  border: 0;
 }
 
-.container {
+.wrapper {
   margin: 0 auto;
-  max-width: 90rem;
+  max-width: 119rem;
 }
+
+.button {
+  background: linear-gradient(135deg, #32c697, #4ed6b2);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  width: fit-content;
+  height: fit-content;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+/* End Globals */
 
 /* Header */
 
 .header {
-  padding: 2rem 0;
   position: relative;
+  padding: 2rem 0;
+  background-color: white;
+  width: 100vw;
+  z-index: 3;
+}
+
+.header__content {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100vw;
-  background-color: white;
-  z-index: -1;
 }
 
 .logo {
@@ -89,16 +113,61 @@ body {
   margin-left: auto;
 }
 
-.button {
-  background: linear-gradient(135deg, #32c697, #4ed6b2);
-  color: white;
-  padding: 14px 36px;
-  border-radius: 40px;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  opacity: 0.8;
-}
-
 /* End Header */
+
+/* Main */
+
+.main {
+  position: relative;
+  background-color: hsl(220, 16%, 96%);
+  width: 100vw;
+  height: 58rem;
+  z-index: 0;
+}
+
+.main__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 9rem;
+  height: 100%;
+}
+
+.main__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.main__header {
+  color: hsl(233, 26%, 24%);
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.main__description {
+  color: hsl(233, 8%, 62%);
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.main__pics {
+  position: relative;
+}
+
+.intro-img {
+  position: absolute;
+  top: -35rem;
+  right: -60rem;
+  z-index: 1;
+}
+
+.mockup-img {
+  position: absolute;
+  top: -25rem;
+  left: 7rem;
+  z-index: 2;
+}
+
+/* End Main */
