@@ -66,6 +66,25 @@ body,
   opacity: 0.8;
 }
 
+.text {
+  color: hsl(233, 8%, 62%);
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.h2-heading {
+  color: hsl(233, 26%, 24%);
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.h3-heading {
+  color: hsl(233, 26%, 24%);
+  font-size: 3rem;
+  font-weight: 400;
+}
+
 /* End Globals */
 
 /* Header */
@@ -119,7 +138,7 @@ body,
 
 .main {
   position: relative;
-  background-color: hsl(220, 16%, 96%);
+  background-color: hsl(0, 0%, 98%);
   width: 100vw;
   height: 58rem;
   z-index: 0;
@@ -142,14 +161,7 @@ body,
 .main__header {
   color: hsl(233, 26%, 24%);
   font-size: 6rem;
-  font-weight: 500;
-}
-
-.main__description {
-  color: hsl(233, 8%, 62%);
-  line-height: 1.5;
-  font-weight: 400;
-  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .main__pics {
@@ -171,3 +183,37 @@ body,
 }
 
 /* End Main */
+
+/* About */
+
+.about {
+  background-color: hsl(220, 16%, 96%);
+  padding: 10rem 0;
+}
+
+.about__content {
+  display: grid;
+  row-gap: 5rem;
+}
+
+.about__header {
+  display: grid;
+  row-gap: 3rem;
+}
+
+.about__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card__info {
+  font-size: 1.5rem;
+}
+
+/* End About */
